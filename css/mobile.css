@@ -1,0 +1,128 @@
+html {
+    font-size: 28pt;
+}
+
+#mobile-nav {
+    /* display the hamburger menu */
+    display: block;
+    /* position it near the top left corner of the screen */
+    position: fixed;
+    top: 0.5em;
+    left: 0.5em;
+    /* give it a reasonable size */
+    height: 5vh;
+    width: 5vh;
+    /* ensure it is on top in the stacking order */
+    z-index: 10;
+    /* turn off <a> tag padding for this tag */
+    padding: 0;
+}
+
+
+#mobile-nav > img {
+    /* Size the image based on the size of the #mobile-nav */
+    width: 100%;
+    height: 100%;
+}
+
+nav {
+    /* mobile orientation is column */
+    flex-direction: column;
+    /* place the nav just under the hamburger menu */
+    top: calc(5vh + .5em);
+    /* hide the <nav> by not letting it have any width size due to max-width */
+    width: 0;
+    /* don't let content extend outside of tag */
+    overflow: hidden;
+    /* transition into view when shown/hidden */
+    transition: all .5s;
+    padding: 0;
+}
+
+/* Show the actual <nav> tag when the #mobile-nav is clicked */
+.mobile-show {
+	width: 12ch !important;
+	/*height: 7em;*/
+	padding: 0.2em !important;
+}
+/*line 43--changed to class .mobile-show instead of nav:target*/
+
+
+
+
+nav > a {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+
+nav > a:first-child {
+    padding-top: 0.5em;
+}
+
+
+nav > a:last-child {
+    padding-bottom: 0.5em;
+}
+
+
+article {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    height: auto;
+    min-height: 100vh;
+}
+
+#home {
+    background-image: url('../images/home-mobile.jpg');
+}
+
+.vertical-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tagline {
+    white-space: nowrap;
+}
+
+#bonus {
+    display: block;
+    margin-top: 3em;
+}
+
+.sidebar {
+    display: none;
+}
+
+.stage {
+    perspective: none;
+    width: 90vw;
+}
+
+.stage .cube {
+    width: 90vw;
+    height: 90vw;
+}
+
+.photobox {
+    flex-direction: column;
+}
+
+.photobox img {
+    width: 90vw;
+}
+
+.photobox:first-of-type {
+    margin-bottom: 2em;
+}
+
+figcaption {
+    font-size: 1.5em;
+}
+
+#contact a, nav a {
+    margin-bottom: 1em;
+}
